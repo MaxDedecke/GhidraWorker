@@ -1,0 +1,10 @@
+# runtime data
+/workspace/
+/tools/
+# python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# test binaries are built on demand
+tests/fixtures/*.exe

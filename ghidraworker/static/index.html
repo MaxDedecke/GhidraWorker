@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GhidraWorker</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23e0703a'/%3E%3Cpath d='M9 11h14M9 16h9M9 21h12' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="/static/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 4 2 8l3.5 4M10.5 4 14 8l-3.5 4M9 3 7 13"/></svg>
+      </span>
+      <span>GhidraWorker</span>
+    </a>
+    <nav class="topnav">
+      <a href="#/" data-nav="projects">Projekte</a>
+      <a href="#/settings" data-nav="settings">Einstellungen</a>
+    </nav>
+    <div class="topbar-right">
+      <span id="env-pill" class="pill">…</span>
+      <button id="theme-toggle" class="icon-btn" title="Hell/Dunkel umschalten" aria-label="Hell/Dunkel umschalten">
+        <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </header>
+  <main id="view" class="view"></main>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <div id="drop-overlay" class="drop-overlay" hidden>
+    <div class="drop-overlay-inner">Datei loslassen, um ein neues Projekt anzulegen</div>
+  </div>
+  <input id="file-input" type="file" multiple hidden>
+  <script src="/static/app.js"></script>
+</body>
+</html>
